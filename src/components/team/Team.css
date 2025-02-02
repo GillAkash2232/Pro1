@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+.head {
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    font-weight: bolder;
+    font-size: large;
+    background-image: linear-gradient(45deg, grey, red, green, aqua, #e4d90c, #d62356);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    text-align: center;
+    font-size: 3rem; /* Default size for large screens */
+    margin-bottom: 20px;
+}
+#addimg{
+background-image: url(../../assets/bg1.png);
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    height: 70%;
+}
+
+.team-block {
+
+    background: white;
+    padding: 5px;
+    width: 20%;
+    height: 80%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-block img {
+    width: 100%;
+    height: 80%;
+    border-radius: 5%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.team-block h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.team-block p {
+    font-size: 14px;
+    color: gray;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 🔥 Fully Responsive Grid System */
+@media (max-width: 1200px) {
+    .cont {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for laptops */
+    }
+}
+
+@media (max-width: 900px) {
+    .cont {
+        grid-template-columns: 1fr; /* 1 column for tablets */
+        padding: 15px;
+    }
+    
+    .head {
+        font-size: 2.5rem; /* Adjust heading for tablets */
+    }
+}

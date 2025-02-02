@@ -1,0 +1,3 @@
+you  have crousel page, coinpage, coininfo page, cointable page now the task in i want to add a buy button in every crypto coin and whem we click on the buy buttton it redirect to a buy crypto page. 
+
+now i have new navbar and i want to give the routes to the buy , sell, swap, transferpage.
