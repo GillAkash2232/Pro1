@@ -8,6 +8,13 @@ import Login from "./pages/Forms/Login";
 import Signup from "./pages/Forms/Signup";
 import CoinPage from "./pages/CoinPage";
 import UserPanel from "./user-pannel/Userpannel";
+import Buy from "./user-pannel/user-pages/Buy";
+import Sell from "./user-pannel/user-pages/Sell";
+import Swap from "./user-pannel/user-pages/Swap";
+import Transfer from "./user-pannel/user-pages/Transfer";
+import Mybalance from "./user-pannel/balance/Mybalance";
+import Myorder from "./user-pannel/orders/Myorder";
+
 
 const App = () => {
   return (
@@ -19,11 +26,23 @@ const App = () => {
 
 const MainLayout = () => {
   const location = useLocation();
-  const hideNavbarRoutes = ["/user-pannel"]; // Navbar is hidden on this route
+  
+  // Routes where the navbar should be hidden
+  const hideNavbarRoutes = [
+    "/user-pannel",
+    "/buy",
+    "/sell",
+    "/swap",
+    "/transfer",
+    "/mybalance",
+    "/myorder",
+  ];
 
   return (
     <div>
+      {/* Hide Navbar on specified routes */}
       {!hideNavbarRoutes.includes(location.pathname) && <Navbar />}
+      
       <div style={{ padding: "20px" }}> {/* Ensures content is visible */}
         <Routes>
           <Route path="/" element={<Home />} />
@@ -32,7 +51,13 @@ const MainLayout = () => {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/coins/:id" element={<CoinPage />} />
-          <Route path="/user-pannel" element={<UserPanel />} /> {/* Ensure this works */}
+          <Route path="/user-pannel" element={<UserPanel />} />
+          <Route path="/buy" element={<Buy />} />
+          <Route path="/sell" element={<Sell />} />
+          <Route path="/swap" element={<Swap />} />
+          <Route path="/transfer" element={<Transfer />} />
+          <Route path="/mybalance" element={<Mybalance />} />
+          <Route path="/myorder" element={<Myorder />} />
         </Routes>
       </div>
     </div>
