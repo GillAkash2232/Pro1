@@ -87,7 +87,7 @@ const SellCryptoForm = () => {
       transactionType: "Sell",
       date: new Date().toLocaleDateString(),
     };
-    addTransaction(transaction);
+    addTransaction(transaction); // Adding the transaction to the history
 
     setSellQuantity("");
     setSellAmount(0);

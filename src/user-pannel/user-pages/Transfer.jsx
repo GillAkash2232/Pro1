@@ -1,12 +1,15 @@
 import React from 'react'
 import UserPanel from '../Userpannel'
+import Sendcoin from '../funds/Sendcoin'
 
 
 const Transfer = () => {
   return (
     <div>
       <UserPanel />
-      Transfer your goods to another person
+      <div>
+        <Sendcoin />
+      </div>
     </div>
   )
 }
