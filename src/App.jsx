@@ -13,7 +13,8 @@ import Sell from "./user-pannel/user-pages/Sell";
 import Swap from "./user-pannel/user-pages/Swap";
 import Transfer from "./user-pannel/user-pages/Transfer";
 import Mybalance from "./user-pannel/balance/Mybalance";
-import Myorder from "./user-pannel/orders/Myorder";
+import History from "./user-pannel/history/History"; 
+
 
 
 const App = () => {
@@ -35,7 +36,7 @@ const MainLayout = () => {
     "/swap",
     "/transfer",
     "/mybalance",
-    "/myorder",
+    "/history",
   ];
 
   return (
@@ -57,7 +58,7 @@ const MainLayout = () => {
           <Route path="/swap" element={<Swap />} />
           <Route path="/transfer" element={<Transfer />} />
           <Route path="/mybalance" element={<Mybalance />} />
-          <Route path="/myorder" element={<Myorder />} />
+          <Route path="/history" element={<History />} />
         </Routes>
       </div>
     </div>

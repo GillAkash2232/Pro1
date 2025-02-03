@@ -1,6 +1,5 @@
 import React from 'react'
 import UserPanel from '../Userpannel'
-import Carousel from '../../components/Banner/Carousel'
 import Buyform from './Buyform'
 
 const Buy = () => {

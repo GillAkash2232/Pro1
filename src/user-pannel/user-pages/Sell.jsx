@@ -1,6 +1,6 @@
 import React from 'react'
 import UserPanel from '../Userpannel'
-import Carousel from '../../components/Banner/Carousel'
+import Sellform from '../sel-component/Sellfrom'
 
 
 const Sell = () => {
@@ -8,12 +8,11 @@ const Sell = () => {
     <div>
       <UserPanel />
       <div>
-        <div><br /><br />
-
-        <Carousel />
+        
+        <div>
+          <Sellform />
         </div>
 
-      you want to sell some thing
       </div>
     </div>
   )

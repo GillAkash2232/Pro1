@@ -6,7 +6,7 @@ const Swap = () => {
   return (
     <div>
       <UserPanel />
-      Swap your coins here
+      
       
     </div>
   )

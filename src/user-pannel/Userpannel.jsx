@@ -1,6 +1,5 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Menu, Transition } from "@headlessui/react";
-import { Fragment } from "react";
 import { ChevronDownIcon, UserIcon } from "@heroicons/react/20/solid";
 import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import logo from '../assets/image.png'; // Import logo image (change the path as needed)
@@ -9,27 +8,24 @@ const UserPanel = () => {
   const navigate = useNavigate(); // Initialize useNavigate
 
   const handleLogout = () => {
-    // Implement your logout logic here (e.g., clear user session or token)
     console.log("User logged out");
     navigate("/"); // Navigate to Home page after logout
   };
 
   const handleCreateAccount = () => {
-    // Navigate to the register page when "Create Another Account" is clicked
     console.log("Create another account");
     navigate("/signup"); // Navigate to Register page
   };
 
   const handleMyBalance = () => {
-    // Navigate to MyBalance page when "My Balance" is clicked
     console.log("Navigating to My Balance");
     navigate("/mybalance"); // Navigate to MyBalance page
   };
 
-  const handleMyOrders = () => {
-    // Navigate to MyOrders page when "My Orders" is clicked
-    console.log("Navigating to My Orders");
-    navigate("/myorder"); // Navigate to MyOrders page
+
+  const handleTransactions = () => {
+    console.log("Navigating to Transactions");
+    navigate("/history"); // Navigate to Transactions (History.jsx)
   };
 
   return (
@@ -67,7 +63,7 @@ const UserPanel = () => {
               leave="transition ease-in duration-150"
               leaveFrom="transform opacity-100 scale-100"
               leaveTo="transform opacity-0 scale-95"
-            >
+            > 
               <Menu.Items className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg z-10">
                 <Menu.Item>
                   {({ active }) => (
@@ -83,19 +79,20 @@ const UserPanel = () => {
                   {({ active }) => (
                     <button
                       className={`block px-4 py-2 text-gray-700 ${active ? "bg-gray-100" : ""}`}
-                      onClick={handleMyBalance} // Navigate to MyBalance page
+                      onClick={handleMyBalance} 
                     >
                       My Balance
                     </button>
                   )}
                 </Menu.Item>
+
                 <Menu.Item>
                   {({ active }) => (
                     <button
                       className={`block px-4 py-2 text-gray-700 ${active ? "bg-gray-100" : ""}`}
-                      onClick={handleMyOrders} // Navigate to MyOrders page
+                      onClick={handleTransactions} // Navigate to History.jsx
                     >
-                      My Orders
+                      Transactions
                     </button>
                   )}
                 </Menu.Item>
